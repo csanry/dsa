@@ -1,23 +1,36 @@
-# Linear search
+# Trees
 
-## Objective 
+## Why use Trees?  
 
-Given a sequence of n numbers 
+- A tree is a nonlinear hierarchical data structure that consists of nodes connected by edges
 
-```
-[a1, a2, ..., an]
-```
+- Other structures (arrays, stack, linked list) are linear data structures that store data sequentially
 
-Output a permutation (reordering) of the input sequence 
-```
-[a'1, a'2, ..., a'n] -> such that 
-a'1 <= a'2 <= ... <= a'n
-```
+- Therefore, the time complexity of linear data structures increases with the increase in data size
+
+- Different tree data structures allow quicker and easier access to the data given its non-linear data structure
 
 ## Characteristics 
 
--
-## Algorithm 
+- Node -> contains a key or value, and points to its child nodes
+
+- The last nodes of each path are leaf nodes (don't have a link)
+
+- Edge -> Link between any two nodes
+
+- Root -> top most node of a tree 
+
+- Height of a node -> number of edges from the node to the deepest leaf 
+
+- Depth of a node -> number of edges from the root to the node
+
+- Height of tree -> height of the root node / depth of the deepest node
+
+- The degree of a node -> total number of branches of that node
+
+- Forest -> A collection of disjoint trees 
+
+## Applications 
 
 - 
 ```python
