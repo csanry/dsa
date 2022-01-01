@@ -21,4 +21,3 @@ class Stack:
         pop = self.stack.pop()
         print(f'Popped item: {pop}')
         return pop
-
