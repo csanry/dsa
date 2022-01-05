@@ -16,9 +16,9 @@ a'1 <= a'2 <= ... <= a'n
 
 ## Characteristics 
 
-- An efficient algorithm for sorting a small number of elements.
+- An efficient algorithm for sorting a small number of elements
 
-- Conceptually similar to how people sort a hand of playing cards.
+- Conceptually similar to how people sort a hand of playing cards
 
 ## Algorithm 
 
