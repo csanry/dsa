@@ -16,11 +16,11 @@ a'1 <= a'2 <= ... <= a'n
 
 ## Characteristics 
 
-- An efficient algorithm for larger arrays.
+- An efficient algorithm for larger arrays
 
-- Utilizes the divide and conquer approach to sort the array - breaks down the array and builds it back up, doing comparisons along the way.
+- Utilizes the divide and conquer approach to sort the array - breaks down the array and builds it back up, doing comparisons along the way
 
-- Does not typically sort in place.
+- Does not typically sort in place
 
 ## Algorithm 
 
