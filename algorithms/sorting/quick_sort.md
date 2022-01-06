@@ -1,4 +1,4 @@
-# Merge sort 
+# Quick sort 
 
 ## Objective 
 
@@ -16,86 +16,86 @@ a'1 <= a'2 <= ... <= a'n
 
 ## Characteristics 
 
-- An efficient algorithm for larger arrays.
+- Defining characteristic of quick sort is selecting a pivot through the partition helper function
 
-- Utilizes the divide and conquer approach to sort the array - breaks down the array and builds it back up, doing comparisons along the way.
-
-- Does not typically sort in place.
+- Utilizes a recursive approach to sort the array - the array is broken down into subarrays
 
 ## Algorithm 
 
-1. Find the midpoint of the array 
+#### Partition concept
 
-2. Split the array into subarrays 
+1. Goal of partition: given an array and an element x of array 
 
-3. Recursively split until smallest array of size 1, this is done by calling merge_sort on the left half, then on the right_half
- 
-4. Merge the two sorted halves into a single sorted array through element comparisons
+2. Have a final output where x is in the correct position in the array
+
+3. All smaller elements will be to the left of x 
+
+4. All larger elements will be to the right of x
+
+#### Partition logic 
+
+1. A pointer is fixed at the pivot (right most element) then compare the elements beginning from the first index
+
+2. If the element is greater than the pivot, set a second pointer for that element
+
+3. Pivot is compared with the other elements. If an element smaller than the pivot element is reached, the smaller element is swapped with the greater element found earlier
+
+4. Process is repeated - find an element greater, an element smaller, and swap the elements
+
+5. When the second last element is reached, swap the pivot element with the second pointer; typically the partition function returns the index
+
+6. Repeat the partition call on the left and the right of the pivot
+
+7. When each subarray is a single element, the array is sorted
 
 ## Implementation 
 
 ```python
-def split(arr): 
-    """
-    Divide step for the merge sort algorithm
-    Returns two sublists: left and right
+# function to find the partition position
+def partition(array, low, high):
+    # choose the rightmost element as pivot
+    pivot = array[high]
     
-    O(log(n)) time
-    """
-    mid = len(arr)//2
-    left = arr[:mid]
-    right = arr[mid:]
-    return left, right
+    # set the i pointer for greater element
+    i = low - 1
 
-def merge(left, right): 
-    """
-    Merges two lists (arrays), sorting them in the process
-    Returns a new merged list
-    i: keeps track of the indexes in the left list
-    j: keeps track of the indexes in the right list
-    
-    O(n) time 
-    """
-    lst = []
-    i, j = 0, 0 
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]: 
-            lst.append(left[i])
+    # traverse through all elements
+    # compare each element with pivot 
+    for j in range(low, high):
+        if array[j] <= pivot:
+            # if smaller element found
+            # swap with the greater element found by i
             i += 1
-        else: 
-            lst.append(right[j])
-            j += 1    
-    # edge case where either list is shorter than the other 
-    # add remaining elements to the return list
-    while i < len(left): 
-        lst.append(left[i])
-        i += 1
-    while j < len(right):
-        lst.append(right[j])
-        j += 1
-    return lst
+            # swapping element at i with element at j
+            array[i], array[j] = array[j], array[i]
     
-def merge_sort(arr): 
-    """
-    Sorts a list in ascending order
-    Returns a new sorted list 
+    # at the second last element
+    # swap the pivot element with the element at current position i
+    array[i + 1], array[high] = array[high], array[i + 1]
     
-    Divide: Find the midpoint of the list and divide into sublists
-    Conquer: Recursively sort the sublists created in previous step
-    Combine: Merge the sorted sublists created in previous step
+    # return the position from where partition is done
+    return i + 1
+
+# function to perform quicksort
+def quick_sort(array, low, high):
     
-    O(n log(n)) time 
-    """
-    if len(arr) <= 1: 
-        return arr
-    left_half, right_half = split(arr)
-    left = merge_sort(left_half)
-    right = merge_sort(right_half)
-    return merge(left, right)
+    # if low == high, array is size 1 and no need to sort
+    if low < high: 
+        # find pivot element position
+        # smaller elements on the left, greater on the right
+        p = partition(array, low, high)
+        
+        # call quick_sort on the left and right of pivot
+        quick_sort(array, low, p - 1)
+        quick_sort(array, p + 1, high)
+
 ```
 
 #### Complexity Analysis 
 
-- Time -> O(n log n);
+- Time
+    - The worst case occurs when the partition process always picks greatest or smallest element as the pivot > O(n^2)
+    - The best case occurs when the partition process always picks the median as pivot > O(n log n)
+    - Quick sort has an average case of O(n log n) 
 
-- Space -> O(n)
+- Space -> Inplace sorting O(1)
