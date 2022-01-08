@@ -45,7 +45,7 @@ def main():
     root.right.right = TreeNode(5)
     print(f'Level order traversal: {traverse(root)}')
 
-main()
+main() # output [[12], [7, 1], [9, 10, 5]]
 
 '''
 Time Complexity
