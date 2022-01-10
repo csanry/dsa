@@ -1,4 +1,4 @@
-# Bubble sort 
+# Selection sort
 
 ## Objective 
 
@@ -16,41 +16,45 @@ a'1 <= a'2 <= ... <= a'n
 
 ## Characteristics 
 
-- Compares two adjacent elements and swaps them 
+- Select the smallest element from an unsorted list in each iteration
 
-- Sorted elements will move to the end in each iteration 
+- Places that element at the beginning of the unsorted list
 
-- Very simple and easy to implement 
+- Useful when list is small, checking of all elements is compulsory, cost of writing to memory matters
 
 ## Algorithm 
 
-- Start from the first index, compare the 1st and 2nd elements
+- Set the first element as minimum 
 
-- If the 1st element is greater, swap the elements
+- Compare minimum with the second element - if the second element is smaller, assign the second element to be minimum
 
-- Move down and compared 2nd and 3rd elements - repeat the swap if 2nd > 3rd
+- Compare minimum with the third element - if it is smaller, assign minimum to the 3rd element; otherwise, do nothing
 
-- Once the last element is hit, we are finished with one iteration and the far most element is sorted
+- This process goes on until the last element 
 
-- Restart from the 1st element and compare again up to the last unsorted element
+- Place the minimum reference in front of the unsorted list
 
+- Restart the iteration with the next index until all elements are placed at their correct positions
 
 ```python
-def bubble_sort(array): 
-    
-    # loop to access each array element 
-    for i in range(len(array)):
-        
-        # loop to compare array elements
-        for j in range(0, len(array) - i - 1): 
-            # compare two adjacent elements
-            if array[j] > array[j + 1]:
-                array[j], array[j + 1] = array[j + 1], array[j]
+def selection_sort(array, size): 
+
+    for step in range(size): 
+        min_idx = step
+
+        for i in range(step + 1, size): 
+
+            # change > to < to sort in descending order
+            # selects the minimum element in each loop
+            if array[i] < array[min_idx]: 
+                min_idx = i 
+        # once the min value is found, swap with min_idx
+        array[step], array[min_idx] = array[min_idx], array[step]
 ```
 
 #### Complexity Analysis 
 
-- Bubble sort compares adjacent elements 
+- Selection sort performs 
     - 1st cycle (n - 1) comparisons
     - 2nd cycle (n - 2) comparisons ...
     - last 1 comparison
@@ -61,11 +65,11 @@ def bubble_sort(array):
 - Which is O(n^2) complexity
 
 - Another way to think about it 
-    - Bubble sort requires two loops - hence complexity is n * n = n^2
+    - Selection sort requires two loops (one nested) - hence complexity is n * n = n^2
     
 - Time
     - The worst case is O(n^2), when the array is in descending order
-    - Best case is O(n) - array is already sorted
+    - Best case is still O(n^2) - array is already sorted
     - Average case is O(n^2), when the array elements are jumbled up
 
-- Space -> O(1) inplace sorting 
+- Space -> O(1) inplace sorting > variable to store step is used 
