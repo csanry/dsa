@@ -40,9 +40,11 @@ def main():
     print(remove_element([2, 2, 2, 11], 2))
 
 
-main()
+if __name__ == "__main__":
+    main()
 
-""" 
+
+"""
 Time Complexity 
 The time complexity of the above algorithm will be O(N), where 'N' is the total number of elements in the given array.
 We have to traverse the entire array to check the values.
