@@ -2,8 +2,8 @@
 
 ### Description
 
-- Given an array of integers nums and an integer target, return indices of the
-  two numbers such that they add up to target
+- Given an array of integers `nums` and an integer `target`, return indices of the
+  two numbers such that they add up to `target`
 
 - You may assume that each input would have exactly one solution, and you may
   not use the same element twice
@@ -60,7 +60,7 @@ move to 1 and compute its sum with 5 and 3; we don't need to calculate 1 + 2 as 
 ```
 
 - For such a solution, we need to loop through the entire array once, and for
-  each element check it against worst case `n` times, leading $n \times n \rarr O(n^2)$
+  each element check it against worst case `n` times, leading to $n \times n \rightarrow O(n^2)$
   time complexity
 
 - The space required does not depend on the size of the input, so this solution
@@ -76,7 +76,7 @@ class Solution:
         return
 ```
 
-- We can reduce the lookup time from $O(n) \rarr O(1)$ by trading space for speed
+- We can reduce the lookup time from $O(n) \rightarrow O(1)$ by trading space for speed
 
 - A more efficient solution would involve iterating through the elements, performing a lookup to see if its complement exists in the hashmap, and inserting it in if it doesn't
 
@@ -99,7 +99,7 @@ move to 5 and then 3; the complement of 3 (2) exists in the hash table, so retur
 
 - If the complement exists, we have found a solution and can return the indices
 
-- Since we traverse the array only once, and each lookup costs $O(1)$ time, the entire algorithm takes $n \times O(1) \rarr O(n)$ time
+- Since we traverse the array only once, and each lookup costs $O(1)$ time, the entire algorithm takes $n \times O(1) \rightarrow O(n)$ time
 
 - We will store at most `n` elements in the hashmap, therefore the solution requires $O(n)$ space
 
