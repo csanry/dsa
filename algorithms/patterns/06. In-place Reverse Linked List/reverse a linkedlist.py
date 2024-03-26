@@ -1,8 +1,9 @@
-'''
+"""
 Problem Statement
 Given the head of a Singly LinkedList, reverse the LinkedList.
 Write a function to return the new head of the reversed LinkedList.
-'''
+"""
+
 
 class Node:
     def __init__(self, value, next=None):
@@ -16,15 +17,17 @@ class Node:
             temp = temp.next
         print()
 
+
 # implementation
 def reverse(head):
     previous, current, next = None, head, None
     while current is not None:
-        next = current.next # temporarily store the next node
-        current.next = previous # reverse the current node
-        previous = current # before we move to the nexlt node, point previous to the current node
-        current = next # move to the next node
+        next = current.next  # temporarily store the next node
+        current.next = previous  # reverse the current node
+        previous = current  # before we move to the nexlt node, point previous to the current node
+        current = next  # move to the next node
     return previous
+
 
 def main():
     head = Node(2)
@@ -33,18 +36,19 @@ def main():
     head.next.next.next = Node(8)
     head.next.next.next.next = Node(10)
 
-    print("Nodes of original LinkedList are: ", end='')
+    print("Nodes of original LinkedList are: ", end="")
     head.print_list()
     result = reverse(head)
-    print("Nodes of reversed LinkedList are: ", end='')
+    print("Nodes of reversed LinkedList are: ", end="")
     result.print_list()
+
 
 main()
 
-'''
+"""
 Time complexity 
 The time complexity of our algorithm will be O(N) where ‘N’ is the total number of nodes in the LinkedList.
 
 Space complexity 
 We only used constant space, therefore, the space complexity of our algorithm is O(1).
-'''
+"""

@@ -1,4 +1,4 @@
-'''
+"""
 Problem Challenge 1
 
 Permutation in a String (hard)
@@ -34,7 +34,8 @@ Example 4:
 Input: String="aaacb", Pattern="abc"
 Output: true
 Explanation: The string contains "acb" which is a permutation of the given pattern.
-'''
+"""
+
 
 # implementation
 def find_permutation(st, pattern):
@@ -69,19 +70,23 @@ def find_permutation(st, pattern):
                 char_frequency[left_char] += 1
     return False
 
+
 def main():
-    print('Permutation exist: ' + str(find_permutation("oidbcaf", "abc"))) # True
-    print('Permutation exist: ' + str(find_permutation("odicf", "dc"))) # False
-    print('Permutation exist: ' + str(find_permutation("bcdxabcdy", "bcdyabcdx"))) # True
-    print('Permutation exist: ' + str(find_permutation("aaacb", "abc"))) # True
+    print("Permutation exist: " + str(find_permutation("oidbcaf", "abc")))  # True
+    print("Permutation exist: " + str(find_permutation("odicf", "dc")))  # False
+    print(
+        "Permutation exist: " + str(find_permutation("bcdxabcdy", "bcdyabcdx"))
+    )  # True
+    print("Permutation exist: " + str(find_permutation("aaacb", "abc")))  # True
+
 
 main()
 
-'''
+"""
 Time Complexity 
 The time complexity of the above algorithm will be O(N + M) where ‘N’ and ‘M’ are the number of characters in the input string and the pattern respectively.
 
 Space Complexity 
 The space complexity of the algorithm is O(M) since in the worst case, 
 the whole pattern can have distinct characters which will go into the HashMap.
-'''
+"""

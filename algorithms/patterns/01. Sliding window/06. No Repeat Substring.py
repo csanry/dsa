@@ -1,4 +1,4 @@
-'''
+"""
 Problem Statement
 Given a string, find the length of the longest substring which has no repeating characters.
 
@@ -16,7 +16,8 @@ Example 3:
 Input: String="abccde"
 Output: 3
 Explanation: Longest substrings without any repeating characters are "abc" & "cde".
-'''
+"""
+
 
 # implementation
 def non_repeat_substring(st):
@@ -38,14 +39,20 @@ def non_repeat_substring(st):
         max_length = max(max_length, window_end - window_start + 1)
     return max_length
 
+
 def main():
-    print("Length of the longest substring: " + str(non_repeat_substring("aabccbb"))) # 3
-    print("Length of the longest substring: " + str(non_repeat_substring("abbbb"))) # 2
-    print("Length of the longest substring: " + str(non_repeat_substring("abccde"))) # 3
+    print(
+        "Length of the longest substring: " + str(non_repeat_substring("aabccbb"))
+    )  # 3
+    print("Length of the longest substring: " + str(non_repeat_substring("abbbb")))  # 2
+    print(
+        "Length of the longest substring: " + str(non_repeat_substring("abccde"))
+    )  # 3
+
 
 main()
 
-'''
+"""
 Time Complexity 
 The time complexity of the above algorithm will be O(N) where ‘N’ is the number of characters in the input string.
 
@@ -53,4 +60,4 @@ Space Complexity
 The space complexity of the algorithm will be O(K) where KK is the number of distinct characters in the input string. 
 This also means K<=N, because in the worst case, the whole string might not have any repeating character so the entire string will be added to the HashMap. 
 Having said that, since we can expect a fixed set of characters in the input string (e.g., 26 for English letters), we can say that the algorithm runs in fixed space O(1); in this case, we can use a fixed-size array instead of the HashMap.
-'''
+"""

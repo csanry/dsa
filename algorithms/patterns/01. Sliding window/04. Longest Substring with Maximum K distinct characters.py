@@ -1,4 +1,4 @@
-'''
+"""
 Problem Statement #
 Given a string, find the length of the longest substring in it with no more than K distinct characters.
 
@@ -19,7 +19,8 @@ Example 3:
 Input: String="cbbebi", K=3
 Output: 5
 Explanation: The longest substrings with no more than '3' distinct characters are "cbbeb" & "bbebi".
-'''
+"""
+
 
 # implementation
 def longest_substring_with_k_distinct(st, k):
@@ -39,25 +40,36 @@ def longest_substring_with_k_distinct(st, k):
             char_frequency[left_char] -= 1
             if char_frequency[left_char] == 0:
                 del char_frequency[left_char]
-            window_start += 1 # shrink the start window
+            window_start += 1  # shrink the start window
 
         # record the current max length
         max_length = max(max_length, window_end - window_start + 1)
     # finish loop for each letter to get final result
     return max_length
 
+
 def main():
-    print("Length of the longest substring: " + str(longest_substring_with_k_distinct("araaci", 2))) # 4
-    print("Length of the longest substring: " + str(longest_substring_with_k_distinct("araaci", 1))) # 2
-    print("Length of the longest substring: " + str(longest_substring_with_k_distinct("cbbebi", 3))) # 5
+    print(
+        "Length of the longest substring: "
+        + str(longest_substring_with_k_distinct("araaci", 2))
+    )  # 4
+    print(
+        "Length of the longest substring: "
+        + str(longest_substring_with_k_distinct("araaci", 1))
+    )  # 2
+    print(
+        "Length of the longest substring: "
+        + str(longest_substring_with_k_distinct("cbbebi", 3))
+    )  # 5
+
 
 main()
 
-'''
+"""
 Time Complexity 
 The time complexity of the above algorithm will be O(N) where ‘N’ is the number of characters in the input string. 
 The outer for loop runs for all characters and the inner while loop ultimately processes each character only once, therefore the time complexity of the algorithm will be O(N+N) which is asymptotically equivalent to O(N).
 
 Space Complexity 
 The space complexity of the algorithm is O(K), as we will be storing a maximum of ‘K+1’ characters in the HashMap.
-'''
+"""

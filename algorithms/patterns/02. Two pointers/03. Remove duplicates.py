@@ -13,6 +13,7 @@ Output: 2
 Explanation: The first two elements after removing the duplicates will be [2, 11].
 """
 
+
 # implementation
 def remove_duplicates(arr):
     # index to track the next non-duplicate element

@@ -21,6 +21,7 @@ Output: 2
 Explanation: The first two elements after removing the duplicates will be [2, 11].
 """
 
+
 # implementation
 def remove_element(nums, val):
     # index to track the next position to swap the value that is not key in

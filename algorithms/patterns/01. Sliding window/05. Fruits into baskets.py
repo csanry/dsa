@@ -1,4 +1,4 @@
-'''
+"""
 Problem Statement
 Given an array of characters where each character represents a fruit tree:
 Your goal is to put the maximum number of fruits into two baskets.
@@ -19,11 +19,11 @@ Input: Fruit=['A', 'B', 'C', 'B', 'B', 'C']
 Output: 5
 Explanation: We can put 3 'B' in one basket and two 'C' in the other basket.
 This can be done if we start with the second letter: ['B', 'C', 'B', 'B', 'C']
-'''
-
+"""
 
 # implementation with defaultdict to eliminate checking for 0s
 from collections import defaultdict
+
 
 def fruits_into_baskets(fruits):
     window_start, max_fruits = 0, 0
@@ -45,13 +45,21 @@ def fruits_into_baskets(fruits):
         max_fruits = max(max_fruits, window_end - window_start + 1)
     return max_fruits
 
+
 def main():
-    print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'A', 'C']))) # 3
-    print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C']))) # 5
+    print(
+        "Maximum number of fruits: "
+        + str(fruits_into_baskets(["A", "B", "C", "A", "C"]))
+    )  # 3
+    print(
+        "Maximum number of fruits: "
+        + str(fruits_into_baskets(["A", "B", "C", "B", "B", "C"]))
+    )  # 5
+
 
 main()
 
-'''
+"""
 Time Complexity 
 The time complexity of the above algorithm will be O(N) where ‘N’ is the number of characters in the input array. 
 The outer for loop runs for all characters and the inner while loop processes each character only once, therefore the time complexity of the algorithm will be O(N+N), which is asymptotically equivalent to O(N).
@@ -63,4 +71,4 @@ Similar Problems
 Problem 1: Longest Substring with at most 2 distinct characters
 Given a string, find the length of the longest substring in it with at most two distinct characters.
 Solution: This problem is exactly similar to our parent problem.
-'''
+"""
