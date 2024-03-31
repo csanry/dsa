@@ -45,9 +45,9 @@ def main():
 main()
 
 """
-Time Complexity 
+Time Complexity
 The time complexity of the above algorithm will be O(N) where ‘N’ is the count of numbers in the input array.
 
-Space Complexity 
+Space Complexity
 The algorithm runs in constant space O(1).
 """

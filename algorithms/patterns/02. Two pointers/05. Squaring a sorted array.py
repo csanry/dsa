@@ -1,5 +1,5 @@
 """
-Problem Statement 
+Problem Statement
 Given a sorted array, return an array of the squares of each number, sorted in non-decreasing order.
 
 Example 1:
@@ -41,9 +41,9 @@ def main():
 main()
 
 """
-Time complexity 
+Time complexity
 The time complexity of the above algorithm will be O(n) as we are iterating through the input array only once.
 
-Space complexity 
+Space complexity
 The space complexity of the above algorithm will also be O(n); this space will be used for the output array.
 """

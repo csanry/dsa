@@ -39,20 +39,20 @@ def main():
 main()
 
 """
-Time Complexity 
+Time Complexity
 The time complexity of the above algorithm will be O(N), where 'N' is the total number of elements in the given array.
 
-Space Complexity 
-The algorithm runs in constant space O(1). 
+Space Complexity
+The algorithm runs in constant space O(1).
 
-An alternate approach 
-Instead of using a two-pointer or a binary search approach, we can utilize a Hashtable to search for the required pair. 
-We can iterate through the array one number at a time. 
+An alternate approach
+Instead of using a two-pointer or a binary search approach, we can utilize a Hashtable to search for the required pair.
+We can iterate through the array one number at a time.
 
-For our number X, we need to find Y such that X + Y == Target: 
+For our number X, we need to find Y such that X + Y == Target:
 1. Search for Y (which is equivalent to Target - X") in the HashTable.
 2. If Y is present in the Hashtable: pair found
-3. If Y is not present, insert X into the Hashtable, we can search it for the later numbers. 
+3. If Y is not present, insert X into the Hashtable, we can search it for the later numbers.
 """
 
 
@@ -74,9 +74,9 @@ def main():
 main()
 
 """
-Time Complexity 
+Time Complexity
 The time complexity of the above algorithm will be O(N), where 'N' is the total number of elements in the given array.
 
-Space Complexity 
+Space Complexity
 The space complexity will also be O(N), as, in the worst case, we will be pushing 'N' numbers into the Hashtable.
 """

@@ -54,9 +54,9 @@ def main():
 main()
 
 """
-Time Complexity 
+Time Complexity
 The time complexity of the above algorithm will be O(N) where ‘N’ is the number of letters in the input string.
 
-Space Complexity 
+Space Complexity
 As we are expecting only the lower case letters in the input string, we can conclude that the space complexity will be O(26), to store each letter’s frequency in the HashMap, which is asymptotically equal to O(1).
 """
