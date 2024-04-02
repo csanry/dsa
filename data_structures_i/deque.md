@@ -12,7 +12,7 @@ Enter Instructions here
 # python code here
 ```
 
-#### Example 
+#### Example
 
 ```
 # Expected output

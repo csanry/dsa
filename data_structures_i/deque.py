@@ -1,6 +1,5 @@
 # Deque implementation
 class Deque:
-
     def __init__(self):
         self.deque = []
 
@@ -30,11 +29,12 @@ class Deque:
     def size(self):
         return len(self.items)
 
-'''
+
+"""
 Deque or Double Ended Queue is a type of queue in which insertion and removal of elements can
 either be performed from the front or the rear.
 Thus, it does not follow FIFO rule (First In First Out).
-'''
+"""
 
-'''The time complexity of all the above operations is constant i.e. O(1).
-'''
+"""The time complexity of all the above operations is constant i.e. O(1).
+"""
