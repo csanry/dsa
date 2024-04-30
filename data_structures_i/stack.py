@@ -20,3 +20,8 @@ class Stack:
         pop = self.stack.pop()
         print(f"Popped item: {pop}")
         return pop
+
+
+"""
+The complexity of push and pop operations in a stack is O(1).
+"""

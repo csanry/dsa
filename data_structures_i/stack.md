@@ -1,52 +1,46 @@
 # Stack
 
-A stack is a linear data structure that follows the principle of Last In First
-Out (LIFO).
+> A stack is a linear data structure that follows the principle of Last In First Out (LIFO).
 
-We can think of the stack data structure as a pile of plates on top of one
-another. Operations that you can perform include:
+- We can think of the stack data structure as a pile of plates on top of one another
 
-1. Put one plate on top of the other
+- Operations that you can perform include:
 
-2. Remove the top plate
+1. Put one plate on top of the other (`push` operation)
 
-If you need to remove the plate on the bottom, you must first remove all the
-plates on top.
+2. Remove the top plate (`pop` operation)
 
-![sliding window](./../assets/sliding_window.png)
+- If you need to remove the plate on the bottom, you must first remove all the plates on top
 
-#### Basic stack operations
+### Basic stack operations
 
-1. Push: Add an element to the top of a stack
+- `push`: Add an element to the top of a stack
 
-2. Pop: Remove an element from the top of a stack
+- `pop`: Remove an element from the top of a stack
 
-3. IsEmpty: Check if the stack is empty
+- `isEmpty`: Check if the stack is empty
 
-4. IsFull: Check if the stack is full
+- `isFull`: Check if the stack is full
 
-5. Peek: Get the value of the top element without removing it
+- `peek`: Get the value of the top element without removing it
 
-#### Workings of a Stack Data Structure
+### Workings of a Stack Data Structure
 
 The operations work as follows:
 
-1. A pointer called `TOP` is used to keep track of the top element in the stack.
+- A pointer called `TOP` is used to keep track of the top element in the stack
 
-2. When initializing the stack, we set its value to `-1` so that we can check if
-   the stack is empty by comparing `TOP == -1`.
+- When initializing the stack, we set its value to `-1` so that we can check if the stack is empty by comparing `TOP == -1`
 
-3. On pushing an element, we increase the value of `TOP` and place the new
-   element in the position pointed to by `TOP`.
+- On pushing an element, increase the value of `TOP` and place the new element in the position pointed to by `TOP`
 
-4. On popping an element, we return the element pointed to by `TOP` and reduce
-   its value.
+- On popping an element, we return the element pointed to by `TOP` and reduce its value
 
-5. Before pushing, we check if the stack is already full.
+- Before pushing, check if the stack is already full and terminate the process if `true`
 
-6. Before popping, we check if the stack is already empty.
+- Before popping, check if the stack is already empty and terminate the process if `true`
 
-#### Implementation
+### Python implementation
 
 ```python
 # Stack implementation
@@ -74,20 +68,12 @@ class Stack:
         return pop
 ```
 
-#### Applications of Stack Data Structure
+### Applications of Stack Data Structure
 
-Although stack is a simple data structure to implement, it is very powerful.
+> Although stacks are simple data structures to implement, they are very powerful.
 
-The most common uses of a stack are:
+- To reverse a word - Put all the letters in a stack and pop them out. Because of the LIFO order of stack, you will get the letters in reverse order
 
-- To reverse a word - Put all the letters in a stack and pop them out. Because
-  of the LIFO order of stack, you will get the letters in reverse order.
+- In compilers - Compilers use the stack to calculate the value of expressions like `2 + 4 / 5 * (7 - 9)` by converting the expression to prefix or postfix form
 
-- In compilers - Compilers use the stack to calculate the value of expressions
-  like 2 + 4 / 5 * (7 - 9) by converting the expression to prefix or postfix
-  form.
-
-- In browsers - The back button in a browser saves all the URLs you have visited
-  previously in a stack. Each time you visit a new page, it is added on top of
-  the stack. When you press the back button, the current URL is removed from the
-  stack, and the previous URL is accessed.
+- In browsers - The back button in a browser saves all the URLs you have visited previously in a stack. Each time you visit a new page, it is added on top of the stack. When you press the back button, the current URL is removed from the stack, and the previous URL is accessed
