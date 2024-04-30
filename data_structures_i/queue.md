@@ -13,7 +13,7 @@ Queue implementation
 
 - Putting items in the queue is called `enqueue`, and removing items from the queue is called `dequeue`.
 
-### Basic stack operations
+### Basic queue operations
 
 > A queue is an object (an abstract data structure - ADT) that allows the following operations
 
