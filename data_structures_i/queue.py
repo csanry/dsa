@@ -27,6 +27,6 @@ class Queue:
 
 """
 The complexity of enqueue and dequeue operations in a queue using an array is O(1).
-If you use pop(N) in python code,
-then the complexity might be O(n) depending on the position of the item to be popped.
+If you use pop(N) in python code, then the complexity might be O(n).
+This depends on the position of the item to be popped.
 """
