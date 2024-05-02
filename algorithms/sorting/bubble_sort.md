@@ -2,7 +2,7 @@
 
 ## Objective
 
-Given a sequence of n numbers
+Given a sequence of `n` numbers
 
 ```
 [a1, a2, ..., an]
@@ -48,24 +48,24 @@ def bubble_sort(array):
                 array[j], array[j + 1] = array[j + 1], array[j]
 ```
 
-#### Complexity Analysis
+### Complexity Analysis
 
 - Bubble sort compares adjacent elements
-    - 1st cycle (n - 1) comparisons
-    - 2nd cycle (n - 2) comparisons ...
-    - last 1 comparison
+    - 1st cycle $(n - 1)$ comparisons
+    - 2nd cycle $(n - 2)$ comparisons ...
+    - last cycle 1 comparison
 
 - Hence the number of comparisons is an arithmetic progression
-    - (n-1) + (n-2) + ... + 1 = n(n-1)/2
+    - $(n-1) + (n-2) + ... + 1 = n(n-1)/2$
 
-- Which is O(n^2) complexity
+- Which is $O(n^2)$ complexity
 
 - Another way to think about it
-    - Bubble sort requires two loops - hence complexity is n * n = n^2
+    - Bubble sort requires two loops - hence complexity is $n * n = n^2$
 
 - Time
-    - The worst case is O(n^2), when the array is in descending order
-    - Best case is O(n) - array is already sorted
-    - Average case is O(n^2), when the array elements are jumbled up
+    - The worst case is $O(n^2)$, when the array is in descending order
+    - Best case is $O(n)$ - array is already sorted
+    - Average case is $O(n^2)$, when the array elements are jumbled up
 
-- Space -> O(1) inplace sorting
+- Space > $O(1)$ inplace sorting

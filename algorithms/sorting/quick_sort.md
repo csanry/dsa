@@ -2,7 +2,7 @@
 
 ## Objective
 
-Given a sequence of n numbers
+Given a sequence of `n` numbers
 
 ```
 [a1, a2, ..., an]
@@ -22,17 +22,17 @@ a'1 <= a'2 <= ... <= a'n
 
 ## Algorithm
 
-#### Partition concept
+### Partition concept
 
-1. Goal of partition: given an array and an element x of array
+1. Goal of partition: given an array and an element `x` of array
 
-2. Have a final output where x is in the correct position in the array
+2. Have a final output where `x` is in the correct position in the array
 
-3. All smaller elements will be to the left of x
+3. All smaller elements will be to the left of `x`
 
-4. All larger elements will be to the right of x
+4. All larger elements will be to the right of `x`
 
-#### Partition logic
+### Partition logic
 
 1. A pointer is fixed at the pivot (right most element) then compare the elements beginning from the first index
 
@@ -94,8 +94,8 @@ def quick_sort(array, low, high):
 #### Complexity Analysis
 
 - Time
-    - The worst case occurs when the partition process always picks greatest or smallest element as the pivot > O(n^2)
-    - The best case occurs when the partition process always picks the median as pivot > O(n log n)
-    - Quick sort has an average case of O(n log n)
+    - The worst case occurs when the partition process always picks greatest or smallest element as the pivot > $O(n^2)$
+    - The best case occurs when the partition process always picks the median as pivot > $O(n\ log\ n)$
+    - Quick sort has an average case of $O(n\ log\ n)$
 
-- Space -> Inplace sorting O(1)
+- Space -> Inplace sorting $O(1)$

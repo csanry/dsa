@@ -2,7 +2,7 @@
 
 ## Objective
 
-Given a sequence of n numbers
+Given a sequence of `n` numbers
 
 ```
 [a1, a2, ..., an]
@@ -28,7 +28,7 @@ a'1 <= a'2 <= ... <= a'n
 
 2. Split the array into subarrays
 
-3. Recursively split until smallest array of size 1, this is done by calling merge_sort on the left half, then on the right_half
+3. Recursively split until smallest array of size 1, this is done by calling `merge_sort` on the left half, then on the right half
 
 4. Merge the two sorted halves into a single sorted array through element comparisons
 
@@ -42,7 +42,7 @@ def split(arr):
 
     O(log(n)) time
     """
-    mid = len(arr)//2
+    mid = len(arr) // 2
     left = arr[:mid]
     right = arr[mid:]
     return left, right
@@ -94,8 +94,8 @@ def merge_sort(arr):
     return merge(left, right)
 ```
 
-#### Complexity Analysis
+### Complexity Analysis
 
-- Time -> O(n log n);
+- Time > $O(n\ log\ n)$
 
-- Space -> O(n)
+- Space > $O(n)$

@@ -22,7 +22,7 @@ a'1 <= a'2 <= ... <= a'n
 
 ## Algorithm
 
-1. Iterate from arr[1] to arr[n] over the array
+1. Iterate from `arr[1]` to `arr[n]` over the array
 
 2. Compare the current element (key) to its predecessor
 
@@ -51,6 +51,6 @@ def insertion_sort(arr):
 
 #### Complexity Analysis
 
-- Time -> O(n^2); worst case would be to compare each element with every other element in the array
+- Time > $O(n^2)$; worst case would be to compare each element with every other element in the array
 
-- Space -> Inplace sorting O(1)
+- Space > Inplace sorting $O(1)$
