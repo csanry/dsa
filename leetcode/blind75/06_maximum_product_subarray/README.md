@@ -1,4 +1,4 @@
-# Maximum Product Subarray 
+# Maximum Product Subarray
 
 ### Description
 
@@ -6,7 +6,7 @@
 
 - The answer will fit into a 32-bit integer
 
-#### Example 1 
+#### Example 1
 
 ```
 Input: nums = [2, 3, -2, 4]
@@ -47,11 +47,11 @@ class Solution:
         return max_prod
 ```
 
-- The key insight to this problem is that all positive numbers would always lead to a monotonically increasing product - ie the max product would be the product of all the elements in the array 
+- The key insight to this problem is that all positive numbers would always lead to a monotonically increasing product - ie the max product would be the product of all the elements in the array
 
 - If there were negative elements in the array, we would need an even number of negative elements to form a larger product
 
-- This problem can be solved using dynamic programming to build 
+- This problem can be solved using dynamic programming to build
 
 ```
 -1 -2 -3

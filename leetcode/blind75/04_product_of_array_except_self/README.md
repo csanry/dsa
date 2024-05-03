@@ -1,4 +1,4 @@
-# Product of Array Except Self 
+# Product of Array Except Self
 
 ### Description
 
@@ -8,7 +8,7 @@
 
 - You must write an algorithm that runs in $O(n)$ time and without using the division operation
 
-#### Example 1 
+#### Example 1
 
 ```
 Input: nums = [1, 2, 3, 4]
@@ -84,7 +84,7 @@ i = 1
   ^ <<< curr val
 1 12 8 6 <<< postfix (12 * 2) = 24
 
-i = 
+i =
 1 2 3 4
 ^ <<< curr val
 24 12 8 6 <<< postfix (24 * 1) = 24
