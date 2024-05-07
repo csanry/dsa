@@ -48,7 +48,7 @@ def bubble_sort(array):
                 array[j], array[j + 1] = array[j + 1], array[j]
 ```
 
-### Complexity Analysis
+## Complexity Analysis
 
 - Bubble sort compares adjacent elements
     - 1st cycle $(n - 1)$ comparisons

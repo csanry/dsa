@@ -91,7 +91,7 @@ def quick_sort(array, low, high):
 
 ```
 
-#### Complexity Analysis
+## Complexity Analysis
 
 - Time
     - The worst case occurs when the partition process always picks greatest or smallest element as the pivot > $O(n^2)$

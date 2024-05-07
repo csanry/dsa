@@ -94,7 +94,7 @@ def merge_sort(arr):
     return merge(left, right)
 ```
 
-### Complexity Analysis
+## Complexity Analysis
 
 - Time > $O(n\ log\ n)$
 

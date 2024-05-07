@@ -170,3 +170,8 @@ class Graph:
     - This must be done for every vertex connected to the source $O(\text{V})$
 
 - Space Complexity: $O(\text{V})$ to store the distances / predecessors for each vertex
+
+
+## Resources
+
+[Dijkstra's Overview](https://www.youtube.com/watch?v=_lHSawdgXpI)

@@ -38,7 +38,7 @@ def linear_search(k: int, arr: list[int]) -> int:
     return -1
 ```
 
-#### Complexity Analysis
+## Complexity Analysis
 
 - Time complexity $O(n)$
     - The best case is when the target element is located in the first index $O(1)$ since there is only one comparison operation

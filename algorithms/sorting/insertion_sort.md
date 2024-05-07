@@ -49,7 +49,7 @@ def insertion_sort(arr):
         arr[j + 1] = key
 ```
 
-#### Complexity Analysis
+## Complexity Analysis
 
 - Time > $O(n^2)$; worst case would be to compare each element with every other element in the array
 

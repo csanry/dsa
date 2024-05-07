@@ -52,7 +52,7 @@ def selection_sort(array, size):
         array[step], array[min_idx] = array[min_idx], array[step]
 ```
 
-#### Complexity Analysis
+## Complexity Analysis
 
 - Selection sort performs
     - 1st cycle $(n - 1)$ comparisons

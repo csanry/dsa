@@ -72,7 +72,7 @@ def binary_search(arr, k, low, high):
     return -1
 ```
 
-### Complexity Analysis
+## Complexity Analysis
 
 - Time
     - Best case is when the element is at the midpoint - $O(1)$ time
