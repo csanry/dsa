@@ -1,6 +1,7 @@
 """
 Problem Statement
-Given a string with lowercase letters only, if you are allowed to replace no more than ‘k’ letters with any letter, find the length of the longest substring having the same letters after replacement.
+Given a string with lowercase letters only, if you are allowed to replace no more than 'k' letters with any letter,
+find the length of the longest substring having the same letters after replacement.
 
 Example 1: Input: String="aabccbb", k=2
 Output: 5
@@ -51,12 +52,15 @@ def main():
     print(length_of_longest_substring("abccde", 1))  # 3
 
 
-main()
+if __name__ == "__main__":
+    main()
+
 
 """
 Time Complexity
-The time complexity of the above algorithm will be O(N) where ‘N’ is the number of letters in the input string.
+The time complexity of the above algorithm will be O(N) where 'N' is the number of letters in the input string.
 
 Space Complexity
-As we are expecting only the lower case letters in the input string, we can conclude that the space complexity will be O(26), to store each letter’s frequency in the HashMap, which is asymptotically equal to O(1).
+As we are expecting only the lower case letters in the input string, we can conclude that the space complexity will be O(26),
+to store each letter's frequency in the hashmap, which is asymptotically equal to O(1).
 """

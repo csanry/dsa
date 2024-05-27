@@ -1,6 +1,7 @@
 """
-Problem Statement #
-Given an array of positive numbers and a positive number 'k', find the maximum sum of any contiguous subarray of size ‘k’.
+Problem Statement
+Given an array of positive numbers and a positive number 'k',
+find the maximum sum of any contiguous subarray of size 'k'.
 
 Example 1:
 
@@ -17,7 +18,7 @@ Explanation: Subarray with maximum sum is [3, 4].
 
 
 # implementation
-def max_sub_array_of_size_k(k, arr):
+def max_subarray_of_size_k(k, arr):
     # instantiate the max sum (result), current window sum, and start index
     max_sum, window_sum = 0, 0
     window_start = 0
@@ -35,15 +36,17 @@ def max_sub_array_of_size_k(k, arr):
 def main():
     print(
         "Maximum sum of a subarray of size K: "
-        + str(max_sub_array_of_size_k(3, [2, 1, 5, 1, 3, 2]))
+        + str(max_subarray_of_size_k(3, [2, 1, 5, 1, 3, 2]))
     )  # 9
     print(
         "Maximum sum of a subarray of size K: "
-        + str(max_sub_array_of_size_k(2, [2, 3, 4, 1, 5]))
+        + str(max_subarray_of_size_k(2, [2, 3, 4, 1, 5]))
     )  # 7
 
 
-main()
+if __name__ == "__main__":
+    main()
+
 
 """
 Time Complexity

@@ -1,6 +1,7 @@
 """
 Problem Statement
-Given an array of positive numbers and a positive number ‘S’, find the length of the smallest contiguous subarray whose sum is greater than or equal to ‘S’.
+Given an array of positive numbers and a positive number 'S',
+find the length of the smallest contiguous subarray whose sum is greater than or equal to 'S'.
 Return 0, if no such subarray exists.
 
 Example 1:
@@ -55,12 +56,15 @@ def main():
     )  # 3
 
 
-main()
+if __name__ == "__main__":
+    main()
+
 
 """
 Time Complexity
 The time complexity of the above algorithm will be O(N).
-The outer for loop runs for all elements and the inner while loop processes each element only once, therefore the time complexity of the algorithm will be O(N+N) which is asymptotically equivalent to O(N).
+The outer for loop runs for all elements and the inner while loop processes each element only once,
+therefore the time complexity of the algorithm will be O(N+N) which is asymptotically equivalent to O(N).
 
 Space Complexity
 The algorithm runs in constant space O(1).
