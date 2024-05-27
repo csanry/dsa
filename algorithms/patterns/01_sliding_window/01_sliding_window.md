@@ -17,7 +17,7 @@
 
 ## Problems
 
-### [Maximum Sum Subarray of Size K](./02.%20Maximum%20Sum%20Subarray%20of%20Size%20K.py)
+### [Maximum Sum Subarray of Size K](./02_maximum_sum_subarray_of_size_k.py)
 
 > Given an array of positive numbers and a positive number `k`, find the maximum sum of any contiguous subarray of size `k`
 
@@ -82,7 +82,7 @@ def max_subarray_of_size_k(k, arr):
 
 - Space complexity of the above algorithm will be $O(1)$
 
-### [Smallest Subarray with a given sum](./03.%20Smallest%20Subarray%20with%20a%20given%20sum.py)
+### [Smallest Subarray with a given sum](./03_smallest_subarray_with_a_given_sum.py)
 
 > Given an array of positive numbers and a positive number 'S', find the length of the smallest contiguous subarray whose sum is greater than or equal to 'S'.
 > Return 0 if no such subarray exists.
@@ -131,7 +131,7 @@ def smallest_subarray_with_given_sum(s, arr):
 
 - The algorithm runs in constant space $O(1)$
 
-### [Longest Substring with Maximum K distinct characters](./04.%20Longest%20Substring%20with%20Maximum%20K%20distinct%20characters.py)
+### [Longest Substring with Maximum K distinct characters](./04_longest_substring_with_maximum_k_distinct_characters.py)
 
 > Given a string, find the length of the **longest substring** in it with no
 > more than K distinct characters.
@@ -156,7 +156,7 @@ def smallest_subarray_with_given_sum(s, arr):
 
     - Removing the character frequency from the hashmap
 
-### [Fruits into baskets](./05.%20Fruits%20into%20baskets.py)
+### [Fruits into baskets](./05_fruits_into_baskets.py)
 
 > Given an array of characters where each characters represents a fruit tree, you are given **two baskets**, and your goal is to put the **maxiumum number of fruits in each basket**. The only restriction is that each basket can have only one type of fruit.
 >
@@ -204,7 +204,7 @@ def fruits_into_baskets(fruits):
 
 - The algorithm runs in constant space $O(1)$ as there can be a maximum of three types of fruits stored in the frequency map.
 
-### [No Repeat Substring](./06.%20No%20Repeat%20Substring.py)
+### [No Repeat Substring](./06_no_repeat_substring.py)
 
 > Given an array of positive numbers and a positive number `k`, find the maximum sum of any contiguous subarray of size `k`.
 
@@ -239,7 +239,7 @@ def non_repeat_substring(st):
 
     - However, since we expect `k` to be a fixed set of characters (26 in English), we can say that the algorithm runs in fixed space $O(1)$
 
-### [Longest Substring with Same Letters after Replacement](./07.%20Longest%20Substring%20with%20Same%20Letters%20after%20Replacement.py)
+### [Longest Substring with Same Letters after Replacement](./07_longest_substring_with_same_letters_after_replacement.py)
 
 > Given a string with lowercase letters only, if you are allowed to replace no more than `k` letters with any letter, find the length of the longest substring having the same letters after replacement.
 
@@ -287,7 +287,7 @@ def length_of_longest_substring(st, k):
 
 - This algorithm requires $O(26)$ space to store each of the 26 letters of the English language, which is asymptotically equal to $O(1)$
 
-### [Longest Subarray with Ones after Replacement](./08.%20Longest%20Subarray%20with%20Ones%20after%20Replacement.py)
+### [Longest Subarray with Ones after Replacement](./08_longest_subarray_with_ones_after_replacement.py)
 
 > Given an array containing 0s and 1s, if you are allowed to replace no more than `k` 0s with 1s, find the length of the longest contiguous subarray having all 1s.
 
@@ -319,7 +319,7 @@ def length_of_longest_substring(arr, k):
 
 - The algorithm runs in $O(1)$ time
 
-### [Permutation in a String](./09.%20Permutation%20in%20a%20String.py)
+### [Permutation in a String](./09_permutation_in_a_string.py)
 
 > Given a string and a pattern, find out if the string contains any permutation of the pattern.
 
