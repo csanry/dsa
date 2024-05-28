@@ -36,7 +36,9 @@ def main():
     print(pair_with_target_sum([2, 5, 9, 11], 11))
 
 
-main()
+if __name__ == "__main__":
+    main()
+
 
 """
 Time Complexity
@@ -58,11 +60,13 @@ For our number X, we need to find Y such that X + Y == Target:
 
 def pair_with_target_sum_hash(arr, target_sum):
     nums = {}  # hashtable to store numbers and their indices
+
     for i, x in enumerate(arr):
         if target_sum - x in nums:
             return [nums[target_sum - x], i]
         else:
             nums[arr[i]] = i
+
     return [-1, -1]
 
 

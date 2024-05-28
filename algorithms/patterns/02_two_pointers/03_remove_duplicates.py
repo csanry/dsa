@@ -1,6 +1,7 @@
 """
 Problem Statement
-Given an array of sorted numbers, remove all duplicates from it. You should not use any extra space; after removing the duplicates in-place return the new length of the array.
+Given an array of sorted numbers, remove all duplicates from it. You should not use any extra space
+After removing the duplicates in-place, return the new length of the array.
 
 Example 1:
 Input: [2, 3, 3, 3, 6, 9, 9]
@@ -17,16 +18,18 @@ Explanation: The first two elements after removing the duplicates will be [2, 11
 # implementation
 def remove_duplicates(arr):
     # index to track the next non-duplicate element
-    next_non_duplicate = 1
+    left = 1
 
     # index to traverse the array
-    i = 1
-    while i < len(arr):
-        if arr[next_non_duplicate - 1] != arr[i]:
-            arr[next_non_duplicate] = arr[i]
-            next_non_duplicate += 1
-        i += 1
-    return next_non_duplicate
+    right = 1
+
+    while right < len(arr):
+        if arr[left - 1] != arr[right]:
+            arr[left] = arr[right]
+            left += 1
+        right += 1
+
+    return left
 
 
 def main():

@@ -18,27 +18,33 @@ After sorting, the array becomes [0, 1, 1, 4, 9].
 
 def square_sorted_array(arr):
 
-    l, r = 0, len(arr) - 1
+    # start at the extreme ends of the sorted array
+    left, right = 0, len(arr) - 1
     res = [0] * len(arr)
-
     current_idx = len(arr) - 1
-    while l <= r:
-        if arr[l] ** 2 > arr[r] ** 2:
-            res[current_idx] = arr[l] ** 2
-            l += 1
+
+    while left <= right:
+        # if the squared left is larger, we add it to the tail of res
+        # increment the left pointer to compare the next element
+        if arr[left] ** 2 > arr[right] ** 2:
+            res[current_idx] = arr[left] ** 2
+            left += 1
         else:
-            res[current_idx] = arr[r] ** 2
-            r -= 1
+            res[current_idx] = arr[right] ** 2
+            right -= 1
         current_idx -= 1
+
     return res
 
 
 def main():
-    print(square_sorted_array([-4, -1, 0, 3, 10]))
-    print(square_sorted_array([-3, -1, 0, 1, 2]))
+    print(square_sorted_array([-4, -1, 0, 3, 10]))  # [0, 1, 9, 16, 100]
+    print(square_sorted_array([-3, -1, 0, 1, 2]))  # [0, 1, 1, 4, 9]
 
 
-main()
+if __name__ == "__main__":
+    main()
+
 
 """
 Time complexity
