@@ -10,6 +10,13 @@
 
 - If you cannot achieve any profit, return `0`
 
+### Summary
+
+- Two pointers pattern
+
+- Find the local minimum with left, right expands window to try and search for local maximum
+
+- Store and compare with global result
 
 #### Example 1
 

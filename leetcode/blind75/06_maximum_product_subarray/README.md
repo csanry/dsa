@@ -6,6 +6,10 @@
 
 - The answer will fit into a 32-bit integer
 
+### Summary
+
+- Dynamic programming, compute the max and max-abs-val for each prefix subarray
+
 #### Example 1
 
 ```
@@ -90,4 +94,5 @@ class Solution:
 
         return res
 ```
+
 ### [Link to leetcode](https://leetcode.com/problems/maximum-product-subarray/description/)

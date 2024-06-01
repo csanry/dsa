@@ -8,6 +8,10 @@
 
 - You must write an algorithm that runs in $O(n)$ time and without using the division operation
 
+### Summary
+
+- Make two passes, first in order, second in reverse, to compute the products
+
 #### Example 1
 
 ```

@@ -4,6 +4,12 @@
 
 - Given an array of integers `nums`, find the subarray with the largest sum, and return its sum
 
+### Summary
+
+- Sliding window approach, Kadane's algorithm
+
+- Dynamic programming perspective: there is no point retaining the previous subarrays with negative sums
+
 #### Example 1
 
 ```

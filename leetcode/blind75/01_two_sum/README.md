@@ -10,6 +10,14 @@
 
 - You can return the answer in any order
 
+### Summary
+
+- Use a hashmap to store seen values and check the difference
+
+- Map will add the index of the last occurrence of a number
+
+- This prevents multiple processing of the same element
+
 #### Example 1
 
 ```

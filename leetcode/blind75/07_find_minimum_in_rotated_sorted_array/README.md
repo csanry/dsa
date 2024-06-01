@@ -14,6 +14,10 @@
 
 - Given the sorted rotated array `nums` of unique elements, return the minimum element of this array using an algorithm that runs in $O(\log n)$
 
+### Summary
+
+- Take advantage of sorted nature, tweak binary search to find the pivot point where the array was rotated
+
 #### Example 1
 
 ```

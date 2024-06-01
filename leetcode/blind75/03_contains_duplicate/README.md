@@ -4,6 +4,10 @@
 
 - Given an array of integers `nums`, return `True` if any value appears at least twice in the array; return `False` otherwise
 
+### Summary
+
+- Use a hashset to store seen values in the array
+
 #### Example 1
 
 ```
