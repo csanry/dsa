@@ -1,7 +1,7 @@
 """
 Problem Statement
-Given the head of a Singly LinkedList, reverse the LinkedList.
-Write a function to return the new head of the reversed LinkedList.
+Given the head of a singly linked list, reverse the linked list.
+Write a function to return the new head of the reversed linked list.
 """
 
 
@@ -24,7 +24,7 @@ def reverse(head):
     while current is not None:
         next = current.next  # temporarily store the next node
         current.next = previous  # reverse the current node
-        previous = current  # before we move to the nexlt node, point previous to the current node
+        previous = current  # before we move to the next node, point previous to the current node
         current = next  # move to the next node
     return previous
 
@@ -36,18 +36,20 @@ def main():
     head.next.next.next = Node(8)
     head.next.next.next.next = Node(10)
 
-    print("Nodes of original LinkedList are: ", end="")
+    print("Nodes of original linked list are: ", end="")
     head.print_list()
     result = reverse(head)
-    print("Nodes of reversed LinkedList are: ", end="")
+    print("Nodes of reversed linked list are: ", end="")
     result.print_list()
 
 
-main()
+if __name__ == "__main__":
+    main()
+
 
 """
 Time complexity
-The time complexity of our algorithm will be O(N) where ‘N’ is the total number of nodes in the LinkedList.
+The time complexity of our algorithm will be O(N) where 'N' is the total number of nodes in the linked list.
 
 Space complexity
 We only used constant space, therefore, the space complexity of our algorithm is O(1).
