@@ -55,3 +55,8 @@
 - The time complexity of the above algorithm is $O(n^2)$, where `n` is the total number of nodes in the tree. This is due to the fact that we traverse each node once (which will take $O(n)$), and for every leaf node, we might have to store its path (by making a copy of the current path) which will take $O(n)$.
 
 - If we ignore the space required for the `all_paths` list, the space complexity of the above algorithm will be $O(n)$ in the worst case. This space will be used to store the recursion stack. The worst case will happen when the given tree is a linked list (ie. every node has one child).
+
+
+### []()
+
+>
